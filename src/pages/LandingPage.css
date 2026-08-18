@@ -1,0 +1,1543 @@
+/* =========================================
+   LANDING PAGE
+========================================= */
+
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% 45%,
+            rgba(0, 119, 255, 0.15),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(0, 217, 255, 0.08),
+            transparent 25%
+        ),
+        #020719;
+
+    color: #ffffff;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 130px 7% 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    position: relative;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+    width: 48%;
+
+    position: relative;
+
+    z-index: 10;
+
+    animation:
+        heroContentIn 1s ease forwards;
+}
+
+@keyframes heroContentIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================
+   SMALL TEXT
+========================================= */
+
+.hero-small-text {
+    margin: 0 0 18px;
+
+    color: #00d9ff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    animation:
+        textReveal 1s ease 0.2s both;
+}
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   HERO TITLE
+========================================= */
+
+.hero-title {
+    margin: 0;
+
+    font-size: clamp(48px, 6vw, 82px);
+
+    line-height: 0.98;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 20px rgba(0, 217, 255, 0.08);
+
+    animation:
+        titleAnimation 1s ease 0.4s both;
+}
+
+.hero-title span {
+    display: inline-block;
+
+    color: #1877f2;
+
+    animation:
+        wordFloat 4s ease-in-out infinite;
+}
+
+.hero-title strong {
+    display: inline-block;
+
+    color: #ff9800;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 0 15px rgba(255, 152, 0, 0.25);
+
+    animation:
+        wordFloat 4s ease-in-out 0.5s infinite;
+}
+
+@keyframes titleAnimation {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes wordFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =========================================
+   HERO DESCRIPTION
+========================================= */
+
+.hero-description {
+    max-width: 550px;
+
+    margin-top: 28px;
+
+    color: #91a5c4;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    animation:
+        textReveal 1s ease 0.7s both;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    animation:
+        textReveal 1s ease 0.9s both;
+}
+
+.hero-primary-button,
+.hero-secondary-button {
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.hero-primary-button {
+    border: none;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1877f2,
+            #00a8ff
+        );
+
+    box-shadow:
+        0 10px 25px rgba(24, 119, 242, 0.3);
+}
+
+.hero-primary-button:hover {
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 15px 35px rgba(24, 119, 242, 0.5),
+        0 0 20px rgba(0, 217, 255, 0.15);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.hero-secondary-button {
+    color: #d9e7f8;
+
+    border:
+        1px solid rgba(0, 217, 255, 0.35);
+
+    background:
+        rgba(0, 217, 255, 0.04);
+}
+
+.hero-secondary-button:hover {
+    color: #ffffff;
+
+    border-color: #00d9ff;
+
+    background:
+        rgba(0, 217, 255, 0.1);
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 217, 255, 0.12);
+}
+
+
+/* =========================================
+   SOCIAL NETWORK
+========================================= */
+
+.social-network {
+    width: 500px;
+    height: 500px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    perspective: 1000px;
+
+    transform-style: preserve-3d;
+
+    animation:
+        networkAppear 1.2s ease 0.3s both;
+}
+
+@keyframes networkAppear {
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.7)
+            rotateY(20deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotateY(0);
+    }
+}
+
+
+/* =========================================
+   NETWORK OUTER GLOW
+========================================= */
+
+.social-network::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 35px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 217, 255, 0.18),
+            rgba(24, 119, 242, 0.07) 40%,
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    pointer-events: none;
+
+    animation:
+        networkGlow 4s ease-in-out infinite;
+}
+
+@keyframes networkGlow {
+    0%,
+    100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   CENTRAL GLOWING SPHERE
+========================================= */
+
+.network-center {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 125px;
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #168cff,
+            #0b5cff 35%,
+            #07306f 65%,
+            #03142d
+        );
+
+    border:
+        2px solid rgba(0, 217, 255, 0.75);
+
+    box-shadow:
+        0 0 20px rgba(0, 217, 255, 0.8),
+        0 0 50px rgba(24, 119, 242, 0.45),
+        0 0 100px rgba(0, 217, 255, 0.18),
+        inset 0 0 25px rgba(0, 217, 255, 0.25);
+
+    z-index: 5;
+
+    transform-style: preserve-3d;
+
+    animation:
+        centerFloat 4s ease-in-out infinite;
+}
+
+@keyframes centerFloat {
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%)
+            translateY(0)
+            rotateY(0deg)
+            rotateX(0deg);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            translateY(-10px)
+            rotateY(8deg)
+            rotateX(5deg);
+    }
+}
+
+
+/* =========================================
+   CENTER INNER
+========================================= */
+
+.center-content {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1877f2,
+            #00d9ff
+        );
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 25px rgba(0, 217, 255, 0.6),
+        0 0 50px rgba(0, 217, 255, 0.25);
+
+    transform: translateZ(20px);
+}
+
+
+/* =========================================
+   CENTER GLOW RING
+========================================= */
+
+.center-glow {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(0, 217, 255, 0.3);
+
+    pointer-events: none;
+
+    animation:
+        centerPulse 2.5s ease-out infinite;
+}
+
+@keyframes centerPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   GLOWING CONNECTION LINES
+========================================= */
+
+.network-line {
+    position: absolute;
+
+    height: 2px;
+
+    transform-origin: left center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(0, 217, 255, 0.3),
+            #00d9ff,
+            rgba(24, 119, 242, 0.35),
+            transparent
+        );
+
+    opacity: 0.7;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    box-shadow:
+        0 0 4px rgba(0, 217, 255, 0.8),
+        0 0 10px rgba(0, 217, 255, 0.5),
+        0 0 20px rgba(24, 119, 242, 0.25);
+
+    animation:
+        connectionPulse 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   MOVING LIGHT THROUGH LINE
+========================================= */
+
+.network-line::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: -20%;
+
+    width: 45px;
+    height: 3px;
+
+    transform:
+        translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffffff,
+            #00d9ff,
+            transparent
+        );
+
+    filter: blur(1px);
+
+    box-shadow:
+        0 0 8px #00d9ff,
+        0 0 15px rgba(0, 217, 255, 0.8);
+
+    animation:
+        lineTravel 3s linear infinite;
+}
+
+@keyframes connectionPulse {
+    0% {
+        opacity: 0.25;
+        filter: brightness(0.8);
+    }
+
+    50% {
+        opacity: 0.95;
+        filter: brightness(1.5);
+    }
+
+    100% {
+        opacity: 0.25;
+        filter: brightness(0.8);
+    }
+}
+
+@keyframes lineTravel {
+    0% {
+        left: -20%;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 110%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   CONNECTION LINE POSITIONS
+========================================= */
+
+.line-one {
+    width: 180px;
+
+    top: 31%;
+    left: 45%;
+
+    transform: rotate(-130deg);
+
+    animation-delay: 0s;
+}
+
+.line-two {
+    width: 180px;
+
+    top: 35%;
+    left: 53%;
+
+    transform: rotate(-45deg);
+
+    animation-delay: 0.4s;
+}
+
+.line-three {
+    width: 200px;
+
+    top: 52%;
+    left: 53%;
+
+    transform: rotate(15deg);
+
+    animation-delay: 0.8s;
+}
+
+.line-four {
+    width: 185px;
+
+    top: 58%;
+    left: 47%;
+
+    transform: rotate(145deg);
+
+    animation-delay: 1.2s;
+}
+
+.line-five {
+    width: 170px;
+
+    top: 55%;
+    left: 43%;
+
+    transform: rotate(200deg);
+
+    animation-delay: 1.6s;
+}
+
+.line-six {
+    width: 190px;
+
+    top: 45%;
+    left: 44%;
+
+    transform: rotate(-190deg);
+
+    animation-delay: 2s;
+}
+
+.line-seven {
+    width: 150px;
+
+    top: 40%;
+    left: 50%;
+
+    transform: rotate(-80deg);
+
+    animation-delay: 0.6s;
+}
+
+.line-eight {
+    width: 150px;
+
+    top: 62%;
+    left: 52%;
+
+    transform: rotate(75deg);
+
+    animation-delay: 1s;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icon {
+    position: absolute;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    z-index: 4;
+
+    cursor: pointer;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    background:
+        rgba(7, 18, 42, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.3),
+        0 0 10px rgba(0, 217, 255, 0.1);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.social-icon:hover {
+    transform:
+        translateY(-8px)
+        rotateX(12deg)
+        rotateY(-12deg)
+        scale(1.15);
+
+    border-color:
+        rgba(0, 217, 255, 0.7);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.4),
+        0 0 20px rgba(0, 217, 255, 0.5),
+        0 0 35px rgba(0, 217, 255, 0.15);
+}
+
+
+/* =========================================
+   SOCIAL ICON POSITIONS
+========================================= */
+
+.icon-facebook {
+    top: 12%;
+    left: 22%;
+    color: #1877f2;
+    animation: iconFloat 4s ease-in-out infinite;
+}
+
+.icon-instagram {
+    top: 7%;
+    right: 25%;
+    color: #ff4f81;
+    animation: iconFloat 4.5s ease-in-out 0.3s infinite;
+}
+
+.icon-youtube {
+    top: 27%;
+    right: 4%;
+    color: #ff0000;
+    animation: iconFloat 3.8s ease-in-out 0.5s infinite;
+}
+
+.icon-twitter {
+    top: 47%;
+    right: 0%;
+    color: #29a9ea;
+    animation: iconFloat 4.2s ease-in-out 0.2s infinite;
+}
+
+.icon-linkedin {
+    bottom: 28%;
+    right: 7%;
+    color: #0a66c2;
+    animation: iconFloat 4.7s ease-in-out infinite;
+}
+
+.icon-pinterest {
+    bottom: 8%;
+    right: 28%;
+    color: #e60023;
+    animation: iconFloat 4s ease-in-out 0.7s infinite;
+}
+
+.icon-tiktok {
+    bottom: 2%;
+    left: 46%;
+    color: #ffffff;
+    animation: iconFloat 4.5s ease-in-out 0.4s infinite;
+}
+
+.icon-whatsapp {
+    bottom: 12%;
+    left: 21%;
+    color: #25d366;
+    animation: iconFloat 4.1s ease-in-out 0.8s infinite;
+}
+
+.icon-telegram {
+    bottom: 30%;
+    left: 3%;
+    color: #2aabee;
+    animation: iconFloat 4.8s ease-in-out 0.2s infinite;
+}
+
+.icon-reddit {
+    top: 48%;
+    left: 0%;
+    color: #ff4500;
+    animation: iconFloat 3.9s ease-in-out 0.6s infinite;
+}
+
+.icon-snapchat {
+    top: 25%;
+    left: 6%;
+    color: #ffe600;
+    animation: iconFloat 4.4s ease-in-out 0.3s infinite;
+}
+
+.icon-github {
+    top: 5%;
+    left: 45%;
+    color: #ffffff;
+    animation: iconFloat 4.3s ease-in-out 0.9s infinite;
+}
+
+
+/* =========================================
+   3D ICON FLOATING
+========================================= */
+
+@keyframes iconFloat {
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotateZ(0deg)
+            rotateX(0deg)
+            rotateY(0deg);
+    }
+
+    25% {
+        transform:
+            translateY(-5px)
+            rotateZ(2deg)
+            rotateX(4deg)
+            rotateY(-3deg);
+    }
+
+    50% {
+        transform:
+            translateY(-12px)
+            rotateZ(3deg)
+            rotateX(8deg)
+            rotateY(-5deg);
+    }
+
+    75% {
+        transform:
+            translateY(-5px)
+            rotateZ(1deg)
+            rotateX(4deg)
+            rotateY(3deg);
+    }
+}
+
+
+/* =========================================
+   CYAN NETWORK NODES
+========================================= */
+
+.network-node {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 7px #00d9ff,
+        0 0 15px rgba(0, 217, 255, 0.7);
+
+    z-index: 3;
+
+    animation:
+        nodeBlink 2s ease-in-out infinite;
+}
+
+@keyframes nodeBlink {
+    0%,
+    100% {
+        opacity: 0.5;
+
+        transform:
+            scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            scale(1.4);
+    }
+}
+
+
+/* =========================================
+   NODE POSITIONS
+========================================= */
+
+.node-one {
+    top: 17%;
+    left: 38%;
+}
+
+.node-two {
+    top: 20%;
+    right: 16%;
+}
+
+.node-three {
+    top: 39%;
+    right: 12%;
+}
+
+.node-four {
+    top: 72%;
+    right: 20%;
+}
+
+.node-five {
+    bottom: 19%;
+    left: 39%;
+}
+
+.node-six {
+    bottom: 25%;
+    left: 11%;
+}
+
+.node-seven {
+    top: 61%;
+    left: 8%;
+}
+
+.node-eight {
+    top: 30%;
+    left: 17%;
+}
+
+.node-nine {
+    top: 10%;
+    left: 62%;
+}
+
+.node-ten {
+    bottom: 38%;
+    right: 6%;
+}
+
+
+/* =========================================
+   ANIMATED PARTICLES
+========================================= */
+
+.network-particle {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #00d9ff;
+
+    box-shadow:
+        0 0 8px #00d9ff,
+        0 0 18px rgba(0, 217, 255, 0.8);
+
+    z-index: 2;
+
+    animation:
+        particleFloat 5s ease-in-out infinite;
+}
+
+.particle-one {
+    top: 22%;
+    left: 30%;
+}
+
+.particle-two {
+    top: 35%;
+    right: 25%;
+    animation-delay: 1s;
+}
+
+.particle-three {
+    top: 65%;
+    right: 30%;
+    animation-delay: 2s;
+}
+
+.particle-four {
+    bottom: 20%;
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+.particle-five {
+    top: 50%;
+    left: 18%;
+    animation-delay: 2.5s;
+}
+
+.particle-six {
+    top: 15%;
+    right: 35%;
+    animation-delay: 3s;
+}
+
+.particle-seven {
+    bottom: 35%;
+    left: 35%;
+    animation-delay: 1.2s;
+}
+
+.particle-eight {
+    top: 42%;
+    right: 18%;
+    animation-delay: 3.5s;
+}
+
+@keyframes particleFloat {
+    0%,
+    100% {
+        opacity: 0.3;
+
+        transform:
+            translateY(0)
+            translateX(0)
+            scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            translateY(-18px)
+            translateX(8px)
+            scale(1.5);
+    }
+}
+
+
+/* =========================================
+   ORANGE ACCENT NODES
+========================================= */
+
+.orange-node {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ff9800;
+
+    box-shadow:
+        0 0 8px #ff9800,
+        0 0 20px rgba(255, 152, 0, 0.8),
+        0 0 35px rgba(255, 152, 0, 0.3);
+
+    z-index: 4;
+
+    animation:
+        orangeNodePulse 2.5s ease-in-out infinite;
+}
+
+.orange-node-one {
+    top: 24%;
+    left: 30%;
+}
+
+.orange-node-two {
+    top: 34%;
+    right: 20%;
+    animation-delay: 0.7s;
+}
+
+.orange-node-three {
+    bottom: 25%;
+    right: 30%;
+    animation-delay: 1.3s;
+}
+
+.orange-node-four {
+    bottom: 35%;
+    left: 18%;
+    animation-delay: 1.8s;
+}
+
+.orange-node-five {
+    top: 18%;
+    right: 42%;
+    animation-delay: 0.4s;
+}
+
+@keyframes orangeNodePulse {
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =========================================
+   FEATURES SECTION
+========================================= */
+
+.features-section {
+    width: 100%;
+
+    position: relative;
+
+    z-index: 10;
+
+    padding:
+        30px 7% 90px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   FEATURE CARD
+========================================= */
+
+.feature-card {
+    position: relative;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    border:
+        1px solid rgba(0, 217, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease,
+        border-color 0.5s ease;
+}
+
+.feature-card:hover {
+    transform:
+        translateY(-12px)
+        rotateX(5deg)
+        rotateY(-3deg);
+
+    border-color:
+        rgba(0, 217, 255, 0.4);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(0, 217, 255, 0.08);
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1877f2,
+            #00a8ff
+        );
+
+    box-shadow:
+        0 8px 20px rgba(24, 119, 242, 0.25);
+
+    transform:
+        translateZ(25px);
+}
+
+.feature-card:nth-child(2) .feature-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #ff9800,
+            #ff5722
+        );
+
+    box-shadow:
+        0 8px 20px rgba(255, 152, 0, 0.25);
+}
+
+.feature-card:nth-child(3) .feature-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #00bcd4,
+            #1877f2
+        );
+}
+
+
+/* =========================================
+   FEATURE HEADING
+========================================= */
+
+.feature-card h3 {
+    margin:
+        0 0 10px;
+
+    font-size: 20px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FEATURE PARAGRAPH
+========================================= */
+
+.feature-card p {
+    margin: 0;
+
+    color: #8fa4c4;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .hero-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero-content {
+        width: 45%;
+    }
+
+    .social-network {
+        width: 430px;
+        height: 430px;
+    }
+
+    .features-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero-section {
+        min-height: auto;
+
+        padding:
+            120px 25px 50px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-small-text {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-title {
+        font-size: 52px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+    .social-network {
+        width: 380px;
+        height: 380px;
+
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 16px;
+    }
+
+    .network-center {
+        width: 100px;
+        height: 100px;
+    }
+
+    .center-content {
+        width: 58px;
+        height: 58px;
+
+        font-size: 18px;
+    }
+
+    .features-section {
+        grid-template-columns: 1fr;
+
+        padding:
+            30px 25px 70px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .hero-section {
+        padding:
+            105px 18px 40px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: 100%;
+    }
+
+    .social-network {
+        width: 320px;
+        height: 320px;
+    }
+
+    .social-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 14px;
+    }
+
+    .network-center {
+        width: 82px;
+        height: 82px;
+    }
+
+    .center-content {
+        width: 48px;
+        height: 48px;
+
+        font-size: 15px;
+    }
+
+    .network-line {
+        height: 1px;
+    }
+
+    .network-line::after {
+        width: 30px;
+    }
+
+    .network-particle {
+        width: 3px;
+        height: 3px;
+    }
+
+    .orange-node {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .landing-page *,
+    .landing-page *::before,
+    .landing-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
